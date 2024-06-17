@@ -46,11 +46,11 @@ a {
 
 .section-title {
     margin: 0;
-    font-size: 26px;
+    font-size: 22px;
 }
 
 .search-title p {
-    font-size: 18.5px;
+    font-size: 18px;
 }
 
 .card {
@@ -239,7 +239,7 @@ nav p:hover {
 .onglets {
     display: flex;
     justify-content: left;
-    gap: 15px;
+    gap: 22px;
 }
 
 .filter-onglet {
@@ -316,14 +316,13 @@ nav p:hover {
 }
 
 .hebergements-and-populaires>section {
-    /* background-color: var(--main-bg-color); */
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
 
 }
 
-/****** Hebergements ******/
+/****** Hebergements à marseille ******/
 .hebergements {
     width: 65%;
     background-color: var(--main-bg-color);
@@ -345,6 +344,7 @@ nav p:hover {
     gap: 30px;
     box-sizing: border-box;
 
+
 }
 
 .hebergements-cards a {
@@ -363,9 +363,10 @@ nav p:hover {
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
+    margin-bottom: -10px;
     padding: 4px;
     gap: 4px;
-    padding-bottom: 15px;
+    padding-bottom: -22px;
     border-radius: 20px;
     box-sizing: border-box;
     background-color: white;
@@ -375,7 +376,7 @@ nav p:hover {
 .hebergement-card img {
     display: flex;
     object-fit: cover;
-    height: 124px;
+    height: 114px;
     border-radius: 20px 20px 0px 0px;
 
 }
@@ -383,11 +384,24 @@ nav p:hover {
 .hebergements-cards-text-content {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 5px;
     padding: 0 15px;
     box-sizing: border-box;
     justify-content: space-between;
 
+}
+
+.hebergements-and-populaires .card-subtitle {
+    margin-top: 0px;
+}
+
+.card-title {
+    margin-top: 2px;
+
+}
+
+.hebergements-cards-text-content .card-subtitle {
+    margin-top: -8px;
 }
 
 /****** Populaires ******/
@@ -482,7 +496,7 @@ nav p:hover {
 .activities-card h3 {
     display: flex;
     align-items: center;
-    height: 59px;
+    height: 48px;
     padding-left: 19px;
 }
 
@@ -503,7 +517,7 @@ footer div {
     box-sizing: border-box;
     width: 100%;
     padding: 20px;
-    gap: 15px;
+    gap: 0;
 
 }
 
@@ -519,6 +533,10 @@ footer div {
         gap: 50px;
     }
 
+    .hebergements-and-populaires .populaires-title {
+        margin: 15px;
+    }
+    
     .filter {
         flex-direction: column;
         align-items: start;
@@ -673,8 +691,9 @@ footer div {
     }
 
     /* filtre */
+
     .onglets {
-        display: flex;
+        display:flex;
         flex-wrap: wrap;
         width: 100%;
     }
