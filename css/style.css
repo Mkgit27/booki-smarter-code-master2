@@ -597,6 +597,8 @@ footer div {
 }
 
 /* Small devices (phones, less than 768px) */
+
+
 @media (max-width: 767.98px) {
 
     body {
@@ -691,9 +693,12 @@ footer div {
     }
 
     /* filtre */
-
+    .section-title {
+        margin: 0;
+        font-size: 18px;
+    }
     .onglets {
-        display:flex;
+        display: flex;
         flex-wrap: wrap;
         width: 100%;
     }
@@ -706,9 +711,7 @@ footer div {
 
     /*hebergement et populaire */
 
-    .hebergements-and-populaires>section
-
-    /* selecteur enfant */
+    .hebergements-and-populaires>section /* selecteur enfant */
         {
         border-radius: 0;
         gap: 15px;
@@ -729,7 +732,9 @@ footer div {
     .populaires-cards {
         display: flex;
         flex-direction: column;
+        width: 300px;
         height: fit-content;
+        margin-left: -17px;
         gap: 15px;
     }
 
@@ -757,6 +762,7 @@ footer div {
 
     .hebergement-card {
         gap: 2px;
+        margin: 0;
     }
 
     .hebergements {
@@ -767,7 +773,7 @@ footer div {
 
     .hebergements a {
         width: 100%;
-        height: 215px;
+        height: 200px;
     }
 
     
