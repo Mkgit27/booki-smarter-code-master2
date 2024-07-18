@@ -1,12 +1,13 @@
-/****** General ***********/
+/****** General ******/
 * {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
+    margin: 0; /* Pour éviter la marge au dessus */
 }
 
 :root {
-    --main-color: #0065FC;
-    --main-bg-color: #F2F2F2;
-    --filter-bg-color: #DEEBFF;
+    --main-color: #0065fc;
+    --main-bg-color: #f2f2f2;
+    --filter-bg-color: #deebff;
 }
 
 .fa-solid {
@@ -16,6 +17,7 @@
 body {
     display: flex;
     justify-content: center;
+ 
 }
 
 main {
@@ -25,14 +27,14 @@ main {
 }
 
 .main-container {
-    display: flex;
+    display: flex; /* obliger pour utiliser gap*/
     flex-direction: column;
     width: 100%;
     min-width: 320px;
     max-width: 1440px;
-    gap: 30px;
+    gap: 30px; /* Pour l'écartement entre header, main, footer*/
     box-sizing: border-box;
-
+   
 }
 
 main {
@@ -47,17 +49,15 @@ a {
 .section-title {
     margin: 0;
     font-size: 22px;
-}
-
-.search-title p {
-    font-size: 18px;
+   
 }
 
 .card {
     background-color: white;
     border-radius: 20px;
-    padding: 5px;
-    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    padding: 4px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.15));
+   
 }
 
 .card img {
@@ -66,6 +66,7 @@ a {
 
 .card-title {
     font-size: 16px;
+   
 }
 
 .euro {
@@ -73,7 +74,7 @@ a {
 }
 
 .neutral-star {
-    color: var(--main-bg-color)
+    color: var(--main-bg-color);
 }
 
 /****** Header ******/
@@ -83,14 +84,14 @@ header {
     width: 100%;
     height: 79px;
     box-sizing: border-box;
-
+ 
 }
 
 header img {
     height: 100%;
     padding: 30px 50px;
     box-sizing: border-box;
-
+ 
 }
 
 nav {
@@ -100,7 +101,7 @@ nav {
     height: 35px;
     gap: 68px;
     align-items: end;
-
+   
 }
 
 nav a {
@@ -113,7 +114,7 @@ nav p {
     height: 100%;
     align-items: end;
     box-sizing: border-box;
-
+ 
 }
 
 nav p:hover {
@@ -128,7 +129,7 @@ nav p:hover {
     width: 100%;
     box-sizing: border-box;
     gap: 35px;
-
+   
 }
 
 .search-title {
@@ -146,7 +147,7 @@ nav p:hover {
     height: 49px;
     width: 377px;
     position: relative;
-
+   
 }
 
 .search-icone {
@@ -163,24 +164,25 @@ nav p:hover {
     top: 0px;
     left: 0px;
     border-radius: 15px 0px 0px 15px;
-
+ 
 }
 
 .search-icone i {
     color: black;
-    transform: scaleX(1.166) scaleY(1.125);
-    /* permet de transforme un élèment*/
+    transform: scaleX(1.166) scaleY(1.125); /* scaleX(1.166) : Agrandit l'élément de 116.6% en largeur.
+    scaleY(1.125) : Agrandit l'élément de 112.5% en hauteur.
+     */
 }
 
 .search-form {
     box-sizing: border-box;
-    width: calc(100% - 50px);
+    width: calc(100% - 50px); /*  width: calc(100% - 50px); : Calcule la largeur de l'élément en prenant 100% de la largeur de son parent et en soustrayant 50 pixels. */
     height: 100%;
     font-size: 18px;
     position: absolute;
     top: 0px;
     left: 50px;
-
+   
 }
 
 .search-input {
@@ -233,13 +235,13 @@ nav p:hover {
 .search-and-filter-title-font {
     font-size: 18px;
     font-weight: bold;
-
+   
 }
 
 .onglets {
     display: flex;
     justify-content: left;
-    gap: 22px;
+    gap: 15px;
 }
 
 .filter-onglet {
@@ -283,10 +285,10 @@ nav p:hover {
     display: flex;
     align-items: center;
     width: 100%;
-    height: fit-content;
+    height: fit-content; /* Permet d'ajuster l'elément selon sa hauteur */
     gap: 10px;
     box-sizing: border-box;
-
+   
 }
 
 .infobar i {
@@ -304,7 +306,7 @@ nav p:hover {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-
+   
 }
 
 /****** Hebergements And Populaires ******/
@@ -312,17 +314,18 @@ nav p:hover {
     display: flex;
     justify-content: space-between;
     gap: 40px;
-
+   
 }
 
-.hebergements-and-populaires>section {
+.hebergements-and-populaires > section {
+    /* background-color: var(--main-bg-color); */
     border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
-
+   
 }
 
-/****** Hebergements à marseille ******/
+/****** Hebergements ******/
 .hebergements {
     width: 65%;
     background-color: var(--main-bg-color);
@@ -343,8 +346,7 @@ nav p:hover {
     height: 100%;
     gap: 30px;
     box-sizing: border-box;
-
-
+   
 }
 
 .hebergements-cards a {
@@ -355,7 +357,6 @@ nav p:hover {
     row-gap: 30px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.15));
 
-
 }
 
 .hebergement-card {
@@ -363,45 +364,30 @@ nav p:hover {
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
-    margin-bottom: -10px;
     padding: 4px;
     gap: 4px;
-    padding-bottom: -22px;
+    padding-bottom: 15px;
     border-radius: 20px;
     box-sizing: border-box;
     background-color: white;
-
+   
 }
 
 .hebergement-card img {
     display: flex;
     object-fit: cover;
-    height: 114px;
+    height: 124px;
     border-radius: 20px 20px 0px 0px;
-
 }
 
 .hebergements-cards-text-content {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 8px;
     padding: 0 15px;
     box-sizing: border-box;
     justify-content: space-between;
-
-}
-
-.hebergements-and-populaires .card-subtitle {
-    margin-top: 0px;
-}
-
-.card-title {
-    margin-top: 2px;
-
-}
-
-.hebergements-cards-text-content .card-subtitle {
-    margin-top: -8px;
+ 
 }
 
 /****** Populaires ******/
@@ -442,10 +428,11 @@ nav p:hover {
     margin-bottom: 4px;
 }
 
+/* .populaires-cards .card-subtitle { */
 .card-subtitle {
     margin: 0;
     font-size: 14px;
-
+   
 }
 
 .populaires-cards .card-rating {
@@ -461,7 +448,7 @@ nav p:hover {
     height: fit-content;
     gap: 30px;
     box-sizing: border-box;
-
+   
 }
 
 .activities-cards {
@@ -469,7 +456,7 @@ nav p:hover {
     justify-content: space-between;
     width: 100%;
     gap: 30px;
-
+   
 }
 
 .activities-cards a {
@@ -483,7 +470,6 @@ nav p:hover {
     background-color: white;
     overflow: hidden;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.15));
-
 }
 
 .activities-card img {
@@ -496,7 +482,7 @@ nav p:hover {
 .activities-card h3 {
     display: flex;
     align-items: center;
-    height: 48px;
+    height: 59px;
     padding-left: 19px;
 }
 
@@ -517,26 +503,17 @@ footer div {
     box-sizing: border-box;
     width: 100%;
     padding: 20px;
-    gap: 0;
-
+    gap: 15px;
+   
 }
-
-
-/* Le code ci-dessous correspond à la version responsive uniquement */
-
-/****** Media queries ***********/
+/****** Media queries ******/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
-
     .hebergements-and-populaires {
         flex-direction: column;
         gap: 50px;
     }
 
-    .hebergements-and-populaires .populaires-title {
-        margin: 15px;
-    }
-    
     .filter {
         flex-direction: column;
         align-items: start;
@@ -547,26 +524,28 @@ footer div {
     }
 
     .populaires {
-        width: 100%;
+        display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 100%;  
         gap: 20px;
     }
 
     .populaires-cards {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
         gap: 20px;
+        justify-content: space-between;
         height: 146px;
+   
     }
 
     .populaires-cards a {
-        width: 33%;
         display: flex;
+        width: 33%;
         height: 100%;
         align-items: end;
         box-sizing: border-box;
+
     }
 
     .card {
@@ -585,22 +564,10 @@ footer div {
     footer {
         margin: 0 50px;
     }
-
-    /*
-    .populaires-cards .card-title {
-        font-size: 14px;
-    }
-
-    .populaires-cards .card-subtitle {
-        font-size: 13px;
-    } */
 }
 
 /* Small devices (phones, less than 768px) */
-
-
 @media (max-width: 767.98px) {
-
     body {
         min-width: 320px;
     }
@@ -617,8 +584,8 @@ footer div {
     }
 
     header img {
-        height: 80px;
-        width: 120px;
+        height: 79px;
+        width: 121.09px;
         padding: 30px;
     }
 
@@ -627,7 +594,7 @@ footer div {
         height: 36px;
         align-items: start;
         box-sizing: border-box;
-        padding: 0 0px;
+        padding: 0 0;
         gap: 0;
     }
 
@@ -648,13 +615,10 @@ footer div {
         border-bottom: var(--main-color) 2px solid;
         border-top: none;
     }
-
-    /*** recherche **/
-
+    /* ---- Barre de recherche ---- */
     .search-and-filter {
         padding: 0 20px;
     }
-
     .search-bar {
         width: 100%;
         justify-content: center;
@@ -666,20 +630,20 @@ footer div {
 
     .submit02 {
         display: inline-block;
-        width: 50px;
-        height: 50px;
+        width: 49px;
+        height: 49px;
         background-color: var(--main-color);
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 0px;
+        right: 0px;
         border: none;
         border-radius: 15px;
-        filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     }
 
     .submit02 i {
         color: white;
-        transform: scale(1.121)
+        transform: scale(1.121);
     }
 
     .search-form {
@@ -692,11 +656,6 @@ footer div {
         border-bottom: solid 2px var(--main-bg-color);
     }
 
-    /* filtre */
-    .section-title {
-        margin: 0;
-        font-size: 18px;
-    }
     .onglets {
         display: flex;
         flex-wrap: wrap;
@@ -709,11 +668,9 @@ footer div {
         font-size: 14px;
     }
 
-    /*hebergement et populaire */
-
-    .hebergements-and-populaires>section /* selecteur enfant */
-        {
-        border-radius: 0;
+    /* ---- Hebergements and populaires ---- */
+    .hebergements-and-populaires > section {
+        border-radius: 0px;
         gap: 15px;
     }
 
@@ -732,9 +689,7 @@ footer div {
     .populaires-cards {
         display: flex;
         flex-direction: column;
-        width: 300px;
         height: fit-content;
-        margin-left: -17px;
         gap: 15px;
     }
 
@@ -746,23 +701,17 @@ footer div {
     }
 
     .populaires-cards .card {
-        margin-top: 0;
+        margin-top: 0px;
         height: fit-content;
         width: 100%;
     }
 
     .populaires-cards img {
-        height: 145px;
-
+        height: 146px;
     }
 
-
-
-    /* Hebergement à marseille */
-
-    .hebergement-card {
-        gap: 2px;
-        margin: 0;
+    .hebergements-cards {
+        gap: 15px;
     }
 
     .hebergements {
@@ -770,29 +719,10 @@ footer div {
         flex-direction: column;
     }
 
-
     .hebergements a {
         width: 100%;
-        height: 200px;
+        height: 207.25px;
     }
-
-    
-
-    .hebergements-and-populaires .card-subtitle {
-        margin-top: 0px;
-    }
-
-    .card-title {
-        margin-top: 2px;
-
-    }
-
-    .hebergements-cards-text-content .card-subtitle {
-        margin-top: -15px ;
-    }
-
-    
-    /* activités */
 
     .activities-cards {
         flex-direction: column;
@@ -801,17 +731,6 @@ footer div {
     .activities-cards a {
         width: 100%;
     }
-
-    .activities-cards img {
-        height: 140px;
-        box-sizing: content-box;
-    }
-
-    .activities-card .card-title {
-        margin-bottom: -1px;
-    }
-
-    /* footer */
 
     footer {
         padding: 30px;
