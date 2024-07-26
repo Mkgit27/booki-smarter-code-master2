@@ -163,7 +163,7 @@ nav p:hover {
     position: absolute;
     top: 0px;
     left: 0px;
-    border-radius: 15px 0px 0px 15px;
+    border-radius: 15px 0px 0px 15px; /*Applique un rayon de bordure pour arrondir les coins droits de l'élément.*/
  
 }
 
@@ -208,7 +208,7 @@ nav p:hover {
     width: 132px;
     background-color: var(--main-color);
     border: none;
-    border-radius: 0px 15px 15px 0px;
+    border-radius: 0px 15px 15px 0px; /*Inclut les bordures et le padding dans les dimensions de l'élément.*/
     color: white;
     position: absolute;
     top: 0px;
@@ -299,7 +299,8 @@ nav p:hover {
     justify-content: center;
     align-items: center;
     border-radius: 100px;
-    border: var(--filter-bg-color) solid 1px;
+    border: #d3d3d3 solid 1px;
+    /*border:var(--main-bg-color) solid 1px;*/
 }
 
 .infobar p {
@@ -310,6 +311,8 @@ nav p:hover {
 }
 
 /****** Hebergements And Populaires ******/
+
+
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
